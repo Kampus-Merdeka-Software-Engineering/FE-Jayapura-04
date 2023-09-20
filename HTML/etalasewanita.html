@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>etalase produk Velvet Gaze</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&family=Oranienbaum&family=Overpass:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!--<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />-->
+
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../img/Logo.jpeg" alt="Logo" />
+
+        <div class="navbar-nav">
+          <a href="home.html">Beranda</a>
+          <a href="#kategori">Kategori</a>
+          <a href="tentang kami.html">Tentang Kami</a>
+          <a href="#" id="bantuan">Bantuan</a>
+        </div>
+        <div class="navbar-ekstra">
+          <a href="#" id="search"><i data-feather="search"></i></a>
+          <a href="#" id="shopping-cart"
+            ><i data-feather="shopping-cart"></i
+          ></a>
+          <a href="#" id="user"><i data-feather="user"></i></a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+        <div class="search-box">
+          <input type="search" name="" id="" placeholder="Cari" />
+        </div>
+      </nav>
+
+      <div class="bantuan">
+        <form>
+          <h3>Ask Question</h3>
+          <div class="id">
+            <label for="Fullname"
+              >Full Name <input type="text" placeholder="Ex: Tiara Andini "
+            /></label>
+          </div>
+          <div class="id">
+            <label for="Email"
+              >Email <input type="Email" placeholder="Ex: Tiara123@gmail.com"
+            /></label>
+          </div>
+          <label for="Question"
+            >Question
+            <textarea
+              class="question"
+              name="question"
+              cols="30"
+              rows="5"
+              placeholder="Enter Your Question..."
+            ></textarea>
+          </label>
+          <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+            <button class="btn cancel" id="cancel">Cancel</button>
+          </div>
+          <div class="sosmed">
+            <h6>Atau</h6>
+            <div class="sosmed-icon">
+              <a href="#" id="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="#" id="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" id="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--bagian sliding login dan signup-->
+
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Log In Form</div>
+          <div class="title signup">Sign Up Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked />
+            <input type="radio" name="slide" id="signup" />
+            <label for="login" class="slide login">Log In</label>
+            <label for="signup" class="slide signup">Sign Up</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="#" class="login">
+              <pre></pre>
+              <div class="field">
+                <input type="email" placeholder="Masukan Email " required />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+              </div>
+
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login" />
+              </div>
+              <div class="signup-link">
+                Belum punya akun?<a href="">Sign Up</a>
+              </div>
+            </form>
+            <form action="#" class="signup">
+              <div class="field">
+                <input type="text" placeholder="Nama Lengkap" required />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Masukan Email" required />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Konfirmasi Password"
+                  required
+                />
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Sign Up" />
+              </div>
+              <div class="signup-link">
+                Sudah punya akun? <a href="">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- etalase  -->
+
+    <div class="container-text">
+      <h2>Produk Wanita</h2>
+      <p>Di sini kamu bisa explore produk kami dengan harga terjangkau!</p>
+    </div>
+
+    <div class="gallery">
+      <div class="content">
+        <img class="product-img" src="../img/Ruffle blouse.jpg" />
+        <h3>Ruffle Blouse</h3>
+        <h7>Rp171.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/bajuwanita11.jpg" />
+        <h3>Floral Blouses shirt</h3>
+        <h7>Rp100.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <a href="deskripsiproduk.html"><button class="buy">More</button></a>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Cute top.png" />
+        <h3>Cute Top</h3>
+        <h7>Rp150.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Square top.png" />
+        <h3>Square Top</h3>
+        <h7>Rp150.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Cool sweatshirt.jpg" />
+        <h3>Cool Sweatshirt</h3>
+        <h7>Rp139.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Pink wow.jpg" />
+        <h3>Pink Wow</h3>
+        <h7>Rp210.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Navy you.png" />
+        <h3>Navy You</h3>
+        <h7>Rp174.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+
+      <div class="content">
+        <img class="product-img" src="../img/Butterfly jogger.png" />
+        <h3>Butterfly Jogger</h3>
+        <h7>Rp253.000</h7>
+        <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button href="#" class="buy">More</button>
+      </div>
+    </div>
+
+    <footer class="footer-distributed">
+      <div class="footer">
+        <div class="footer-left">
+          <img src="../img/Logo.jpeg" alt="Logo" />
+          <div class="brand"><h3>V E L V E T &nbsp G A Z E</h3></div>
+          <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Velvet Gaze</strong> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatum placeat dolorem inventore amet soluta!
+            Ratione, distinctio in. Quas, porro dicta..
+          </p>
+        </div>
+
+        <div class="footer-center">
+          <div class="fitur">
+            <div class="footer-col">
+              <h4>Fitur</h4>
+              <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Kategori</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Bantuan</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Produk</h4>
+              <ul>
+                <li><a href="#">Baju</a></li>
+                <li><a href="#">Celana</a></li>
+                <li><a href="#">Rok</a></li>
+                <li><a href="#">Kemeja</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="kontak">
+            <div class="footer-col">
+              <h4>Kontak Kami</h4>
+              <div>
+                <i class="bx bxs-map"></i>
+                <p><span>Jakarta</span> Indonesia</p>
+              </div>
+
+              <div>
+                <i class="bx bxs-phone"></i>
+                <p><a href="tel:+62098764678">Tlp</a></p>
+              </div>
+              <div>
+                <i class="bx bxs-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">Email</a></p>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>Follow</h4>
+              <div class="social-links">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footer-company-name">
+          Copyright © 2023 <strong>VelvetGaze</strong> All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>-->
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="../js/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
