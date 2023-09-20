@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deskripsi Produk</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="img/Logo.jpeg" alt="Logo" />
+
+        <div class="navbar-nav">
+          <a href="home.html">Beranda</a>
+          <a href="#kategori">Kategori</a>
+          <a href="tentang kami.html">Tentang Kami</a>
+          <a href="#" id="bantuan">Bantuan</a>
+        </div>
+        <div class="navbar-ekstra">
+          <a href="#" id="search"><i data-feather="search"></i></a>
+          <a href="#" id="shopping-cart"
+            ><i data-feather="shopping-cart"></i
+          ></a>
+          <a href="#" id="user"><i data-feather="user"></i></a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+        <div class="search-box">
+          <input type="search" name="" id="" placeholder="Cari" />
+        </div>
+      </nav>
+
+      <div class="bantuan">
+        <form>
+          <h3>Ask Question</h3>
+          <div class="id">
+            <label for="Fullname"
+              >Full Name <input type="text" placeholder="Ex: Tiara Andini "
+            /></label>
+          </div>
+          <div class="id">
+            <label for="Email"
+              >Email <input type="Email" placeholder="Ex: Tiara123@gmail.com"
+            /></label>
+          </div>
+          <label for="Question"
+            >Question
+            <textarea
+              class="question"
+              name="question"
+              cols="30"
+              rows="5"
+              placeholder="Enter Your Question..."
+            ></textarea>
+          </label>
+          <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+            <button class="btn cancel" id="cancel">Cancel</button>
+          </div>
+          <div class="sosmed">
+            <h6>Atau</h6>
+            <div class="sosmed-icon">
+              <a href="#" id="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="#" id="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" id="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--bagian sliding login dan signup-->
+
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Log In Form</div>
+          <div class="title signup">Sign Up Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked />
+            <input type="radio" name="slide" id="signup" />
+            <label for="login" class="slide login">Log In</label>
+            <label for="signup" class="slide signup">Sign Up</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="#" class="login">
+              <pre></pre>
+              <div class="field">
+                <input type="email" placeholder="Masukan Email " required />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+              </div>
+
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login" />
+              </div>
+              <div class="signup-link">
+                Belum punya akun?<a href="">Sign Up</a>
+              </div>
+            </form>
+            <form action="#" class="signup">
+              <div class="field">
+                <input type="text" placeholder="Nama Lengkap" required />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Masukan Email" required />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  placeholder="Konfirmasi Password"
+                  required
+                />
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Sign Up" />
+              </div>
+              <div class="signup-link">
+                Sudah punya akun? <a href="">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <h2>Deskripsi Produk</h2>
+    <section class="deskripsi-produk">
+      <div class="detail-produk">
+        <div class="produk-img">
+          <img src="img/bajuwanita11.jpg" alt="Baju" />
+        </div>
+
+        <div class="content">
+          <h3>Floral Blouses shirt</h3>
+          <h4>Rp. 100.000,-</h4>
+          <h3>Warna</h3>
+          <div class="warna-img">
+            <img src="img/bajuwanita11.jpg" alt="Baju" />
+            <img src="img/bajuwanita14.jpg" alt="Baju" />
+            <img src="img/bajuwanita13.jpg" alt="Baju" />
+          </div>
+          <h3>Ukuran</h3>
+          <div class="ukuran-cta">
+            <a href="#" class="cta">S</a>
+            <a href="#" class="cta">M</a>
+            <a href="#" class="cta">L</a>
+            <a href="#" class="cta">XL</a>
+          </div>
+          <h3>Deskripsi</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            corporis consequuntur quod officiis fuga ipsam rem, incidunt
+            aspernatur natus, aut, voluptates animi. Eligendi ab in similique
+            voluptas architecto tempora iste
+            <span id="selengkapnya">selengkapnya...</span>
+          </p>
+
+          <div class="belanja">
+            <a href="#" class="cta">Belanja Sekarang</a>
+            <a href="#" class="cta"><i data-feather="shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h3>Ulasan Produk</h3>
+    <section class="ulasan">
+      <div class="ulasan-produk">
+        <img src="img/org4.jpg" alt="avatar" class="avatar" />
+        <div class="akun">
+          <h5>Amelia</h5>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima
+        fuga aut dicta. Ex quae earum delectus voluptatibus vitae eos blanditiis
+        asperiores exercitationem sed, quaerat obcaecati magnam sunt a fugiat
+        eaque impedit laboriosam iste repudiandae facilis accusamus quis,
+        dignissimos, temporibus repellat. Fugiat molestiae magnam totam officia
+        qui, maiores maxime dolorum?
+      </p>
+      <div id="horizontal"></div>
+    </section>
+
+    <section class="ulasan">
+      <div class="ulasan-produk">
+        <img src="img/org1.jpg" alt="avatar" class="avatar" />
+        <div class="akun">
+          <h5>Michelle</h5>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima
+        fuga aut dicta. Ex quae earum delectus voluptatibus vitae eos blanditiis
+        asperiores exercitationem sed, quaerat obcaecati magnam sunt a fugiat
+        eaque impedit laboriosam iste repudiandae facilis accusamus quis,
+        dignissimos, temporibus repellat. Fugiat molestiae magnam totam officia
+        qui, maiores maxime dolorum
+      </p>
+      <div id="horizontal"></div>
+    </section>
+    <section class="ulasan">
+      <div class="ulasan-produk">
+        <img src="img/org2.jpg" alt="avatar" class="avatar" />
+        <div class="akun">
+          <h5>Nina Ananda</h5>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima
+        fuga aut dicta. Ex quae earum delectus voluptatibus vitae eos blanditiis
+        asperiores exercitationem sed, quaerat obcaecati magnam sunt a fugiat
+        eaque impedit laboriosam iste repudiandae facilis accusamus quis,
+        dignissimos, temporibus repellat. Fugiat molestiae magnam totam officia
+        qui, maiores maxime dolorum
+      </p>
+      <div id="horizontal"></div>
+    </section>
+    <section class="ulasan">
+      <div class="ulasan-produk">
+        <img src="img/org5.jpg" alt="avatar" class="avatar" />
+        <div class="akun">
+          <h5>Tiara Andini</h5>
+          <div class="star">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima
+        fuga aut dicta. Ex quae earum delectus voluptatibus vitae eos blanditiis
+        asperiores exercitationem sed, quaerat obcaecati magnam sunt a fugiat
+        eaque impedit laboriosam iste repudiandae facilis accusamus quis,
+        dignissimos, temporibus repellat. Fugiat molestiae magnam totam officia
+        qui, maiores maxime dolorum
+      </p>
+      <div id="horizontal"></div>
+    </section>
+
+    <!-- <div class="popup">
+      <h3>Beri Ulasan</h3>
+      <div class="star">
+        <input type="radio" name="rating1" id="rating1" />
+        <label for="rating1" class="fa fa-star"></label>
+        <input type="radio" name="rating1" id="rating2" />
+        <label for="rating2" class="fa fa-star"></label>
+        <input type="radio" name="rating1" id="rating3" />
+        <label for="rating3" class="fa fa-star"></label>
+        <input type="radio" name="rating1" id="rating4" />
+        <label for="rating4" class="fa fa-star"></label>
+        <input type="radio" name="rating1" id="rating5" />
+        <label for="rating5" class="fa fa-star"></label>
+      </div>
+    </div>-->
+
+    <div class="form-ulasan" id="form-ulasan">
+      <h3>Beri Ulasan</h3>
+      <form action="#">
+        <div class="user-input-box">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Masukkan Username"
+          />
+        </div>
+        <div class="rating">
+          <input type="number" name="rating" hidden />
+
+          <i class="bx bx-star star" style="--i: 0"></i>
+          <i class="bx bx-star star" style="--i: 1"></i>
+          <i class="bx bx-star star" style="--i: 2"></i>
+          <i class="bx bx-star star" style="--i: 3"></i>
+          <i class="bx bx-star star" style="--i: 4"></i>
+        </div>
+        <label for="ulasan">Ulasan</label>
+        <textarea
+          name="opinion"
+          cols="30"
+          rows="5"
+          placeholder="Masukkan Ulasan"
+        ></textarea>
+        <div class="btn-group">
+          <button type="submit" class="btn submit">Submit</button>
+          <button class="btn cancel" id="cancelulasan">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
