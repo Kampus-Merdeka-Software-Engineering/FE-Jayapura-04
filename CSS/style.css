@@ -216,7 +216,7 @@ textarea.question {
   color: #fff;
   transition: all 0, 3s ease;
 }
- 
+
 /*form input:focus::placeholder,
 form textarea:focus::placeholder {
   padding-left: 4px;
@@ -918,7 +918,7 @@ p {
 }
 
 /* tambahan */
-#ukuranbaju{
+#ukuranbaju {
   font-size: 16px;
   background-color: #efefef;
   padding: 0.5rem 1rem;
@@ -927,7 +927,7 @@ p {
   border-radius: 0.5rem;
 }
 
-#jumlah-produk{
+#jumlah-produk {
   width: 50px;
   font-size: 16px;
   margin-right: 15px;
@@ -1350,7 +1350,7 @@ footer {
     font-size: 55%;
   }
 }
-.cart{
+.cart {
   width: 70%;
   margin-bottom: 30px;
   margin-right: 10px;
@@ -1366,14 +1366,14 @@ footer {
   z-index: 999;
   color: #a0a0a0;
 }
-.foot{
+.foot {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px;
   padding: 10px 0px;
   border-top: 1px solid #fff;
 }
-#sidebar{
+#sidebar {
   border-radius: 5px;
   padding: 15px;
   text-align: center;
@@ -1384,10 +1384,10 @@ footer {
   align-items: center;
 }
 .keranjang-gambar-kecil {
-  max-width: 70px; 
-  max-height: 70px; 
+  max-width: 70px;
+  max-height: 70px;
   width: auto;
-  height: auto; 
+  height: auto;
   border-radius: 5px;
 }
 .hapus-item {
@@ -1397,7 +1397,7 @@ footer {
 }
 .head h4 {
   margin-bottom: 20px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 button.hapus-item {
   border-radius: 30px;
@@ -1410,8 +1410,8 @@ button.hapus-item {
   padding: 10px;
 }
 #keranjangbelanja td {
-  padding: 10px; 
-  text-align: center; 
+  padding: 10px;
+  text-align: center;
   font-size: medium;
 }
 #total {
@@ -1422,7 +1422,7 @@ button.hapus-item {
   margin-top: 10px;
   margin-right: 120px;
 }
-#ulasan-terkirim{
+#ulasan-terkirim {
   padding: 1.4rem 7%;
   margin-top: 1rem;
 }
@@ -1438,7 +1438,7 @@ button.hapus-item {
 #ulasan-tekstual {
   color: #000;
 }
-#submit-ulasan{
+#submit-ulasan {
   margin: 70px;
   padding: 20px;
 }
@@ -1454,14 +1454,14 @@ a.now {
   font-size: medium;
 }
 .cart-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 .cart-content {
   background-color: white;
@@ -1483,9 +1483,9 @@ a.now {
 #cartPopup {
   display: none;
 }
-.bintang{
+.bintang {
   width: 15px;
 }
-.bintangkosong{
+.bintangkosong {
   width: 15px;
 }

@@ -51,7 +51,15 @@ document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
   }
-}); 
+});
+
+const carts = document.querySelector("#shopping-cart");
+
+document.addEventListener("click", function (e) {
+  if (!carts.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
 
 // buat bagian login sign up pop up
 
@@ -80,7 +88,7 @@ signupBtn.onclick = () => {
 };
 loginBtn.onclick = () => {
   loginForm.style.marginLeft = "0%";
-  loginText.style.marginLeft = "0%"; 
+  loginText.style.marginLeft = "0%";
 };
 signupLink.onclick = () => {
   signupBtn.click();
@@ -166,17 +174,27 @@ document.addEventListener("DOMContentLoaded", function () {
   productContainer.appendChild(productElement);
 });
 
-let bantuan = document.querySelector(".bantuan");
+const bantuan = document.querySelector(".bantuan");
 
 document.querySelector("#bantuan").onclick = () => {
   bantuan.classList.toggle("active");
 };
 
-let cancel = document.querySelector(".bantuan");
+const cancel = document.querySelector(".bantuan");
 
 document.querySelector("#cancel").onclick = () => {
   cancel.classList.remove("active");
 };
+
+// klik di luar sidebar menghilangkan nav
+const help = document.querySelector("#bantuan");
+
+document.addEventListener("click", function (e) {
+  if (!help.contains(e.target) && !bantuan.contains(e.target)) {
+    bantuan.classList.remove("active");
+  }
+});
+
 function tampilGambar() {
   var gambarBesar = document.getElementById("besarImg");
   var daftarGambarKecil = document.getElementsByClassName("kecilImg");
