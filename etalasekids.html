@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <title>etalase produk Velvet Gaze</title>
+    <link rel="stylesheet" href="CSS/etalase style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        src="img/Logo.jpeg" alt="Logo"/>
+
+      <div class="navbar-nav">
+        <a href="home.html">Beranda</a>
+        <a href="kategori.html">Kategori</a>
+        <a href="tentang kami.html">Tentang Kami</a>
+        <a href="#" id="bantuan">Bantuan</a>
+      </div>
+      <div class="navbar-ekstra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="user"><i data-feather="user"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      <div class="search-box">
+        <input type="search" name="" id="" placeholder="Cari" />
+      </div>
+    </nav>
+
+<!-- etalase  -->
+
+<div class="container-text">
+    <h2>Produk Anak-Anak</h2>
+    <p>Di sini kamu bisa explore produk kami dengan harga terjangkau!</p>
+</div>
+
+<div class="gallery">
+  <div class="etalase">
+
+  </div>
+</div>
+
+<!--bagian sliding login dan signup-->
+
+<div class="wrapper">
+  <div class="title-text">
+    <div class="title login">Log In Form</div>
+    <div class="title signup">Sign Up Form</div>
+  </div>
+  <div class="form-container">
+    <div class="slide-controls">
+      <input type="radio" name="slide" id="login" checked>
+      <input type="radio" name="slide" id="signup">
+      <label for="login" class="slide login">Log In</label>
+      <label for="signup" class="slide signup">Sign Up</label>
+      <div class="slider-tab"></div>
+    </div>
+    <div class="form-inner">
+      <form action="#" class="login">
+        <pre>
+        </pre>
+        <div class="field">
+          <input type="email" placeholder="Masukan Email " required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Masukan Password" required>
+        </div>
+
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Belum punya akun?<a href="">Sign Up</a></div>
+      </form>
+      <form action="#" class="signup">
+        <div class="field">
+          <input type="text" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="field">
+          <input type="text" placeholder="Masukan Email" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Masukan Password" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Konfirmasi Password" required>
+        </div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Sign Up"> 
+        </div>
+        <div class="signup-link">Sudah punya akun? <a href="">Login</a></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--bantuan-->
+<div class="bantuan">
+  <form>
+    <h3>Ask Question</h3>
+    <div class="id">
+      <label for="Fullname"
+        >Full Name <input type="text" placeholder="Ex: Tiara Andini "
+      /></label>
+    </div>
+    <div class="id">
+      <label for="Email"
+        >Email <input type="Email" placeholder="Ex: Tiara123@gmail.com"
+      /></label>
+    </div>
+    <label for="Question"
+      >Question
+      <textarea
+        class="question"
+        name="question"
+        cols="30"
+        rows="5"
+        placeholder="Enter Your Question..."
+      ></textarea>
+    </label>
+    <div class="btn-group">
+      <button type="submit" class="btn submit">Submit</button>
+      <button class="btn cancel" id="cancel">Cancel</button>
+    </div>
+    <div class="sosmed">
+      <h6>Atau</h6>
+      <div class="sosmed-icon">
+        <a href="#" id="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="#" id="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" id="instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="JS/mainetalaseanak.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -30,9 +30,8 @@
         </div>
         <div class="navbar-ekstra">
           <a href="#" id="search"><i data-feather="search"></i></a>
-          <a href="#" id="shopping-cart"
-            ><i data-feather="shopping-cart"></i
-          ></a>
+          <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <span id="cart-count">0</span>
           <a href="#" id="user"><i data-feather="user"></i></a>
           <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
@@ -79,6 +78,38 @@
         </form>
       </div>
 
+      <div class="cart-popup" id="cartPopup">
+        <div class="cart">
+            <div id="addto-chart">
+                <div id="sidebar">
+                    <div class="head"><h4>Keranjang Saya</h4></div>
+                    <div class="tambahkekeranjang">
+                        <table id="keranjangbelanja">
+                            <tr id="keranjang-kosong" style="display: none;">
+                                <td colspan="6">Produk belum dipilih</td>
+                            </tr>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Nama</th>
+                                <th>Ukuran</th>
+                                <th>Jumlah</th>
+                                <th>Harga</th>
+                            </tr>
+                            <!-- Isi keranjang belanja akan ditampilkan di sini -->
+                        </table>
+                    </div>
+                    <div class="foot">
+                        <h4>Total</h4>
+                        <h4 id="total">Rp 0</h4>
+                    </div>
+                </div>
+                <div id="shopping-now">
+                    <button><a href="#" class="now">Belanja Sekarang</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
       <!--bagian sliding login dan signup-->
 
       <div class="wrapper">
@@ -112,38 +143,28 @@
                 Belum punya akun?<a href="">Sign Up</a>
               </div>
             </form>
-            <form action="#" class="signup" id="signupform">
+            <form action="#" class="signup" id="signupForm">
               <div class="field">
-                <input
-                  type="text"
-                  id="namalengkap"
-                  placeholder="Nama Lengkap"
-                />
+                <input id="namalengkap" type="text" placeholder="Nama Lengkap" required>
+                <p class="error"></p> 
               </div>
               <div class="field">
-                <input type="text" id="emailup" placeholder="Masukan Email" />
+                <input id="emailup" type="text" placeholder="Masukan Email" required>
+                <p class="error"></p> 
               </div>
               <div class="field">
-                <input
-                  type="password"
-                  id="passwwordup"
-                  placeholder="Masukan Password"
-                />
+                <input id="passwordup" type="password" placeholder="Masukan Password" required>
+                <p class="error" ></p> 
               </div>
               <div class="field">
-                <input
-                  type="password"
-                  id="password2"
-                  placeholder="Konfirmasi Password"
-                />
+                <input id="password2" type="password" placeholder="Konfirmasi Password" required>
+                <p class="error"></p>
               </div>
               <div class="field btn">
                 <div class="btn-layer"></div>
-                <input type="submit" value="Sign Up" />
+                <input type="submit" value="Sign Up"> 
               </div>
-              <div class="signup-link">
-                Sudah punya akun? <a href="">Login</a>
-              </div>
+              <div class="signup-link">Sudah punya akun?<p id="error"></p><a href="#login">Login</a></div>
             </form>
           </div>
         </div>
@@ -153,10 +174,9 @@
       <main class="content">
         <h1>Selamat Datang!</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae,
-          animi.
+          Woy belanja di sini!!! murce bang
         </p>
-        <a href="#" class="cta">Belanja Sekarang</a>
+        <a href="#kategori" class="cta">Jelajahi Sekarang</a>
       </main>
     </section>
 
@@ -169,25 +189,25 @@
           <div class="swiper-slide box">
             <img src="img/bg4.jpg" alt="" />
             <div class="content">
-              <a href="html/etalasewanita.html" class="btn">Wanita</a>
+              <a href="etalasewanita.html" class="btn">Wanita</a>
             </div>
           </div>
           <div class="swiper-slide box">
             <img src="img/bg3.jpg" alt="" />
             <div class="content">
-              <a href="#" class="btn">Pria</a>
+              <a href="etalasepria.html" class="btn">Pria</a>
             </div>
           </div>
           <div class="swiper-slide box">
             <img src="img/bg2.jpg" alt="" />
             <div class="content">
-              <a href="#" class="btn">Anak-Anak</a>
+              <a href="etalasekids.html" class="btn">Anak-Anak</a>
             </div>
           </div>
           <div class="swiper-slide box">
             <img src="img/bg1.jpg" alt="" />
             <div class="content">
-              <a href="#" class="btn">Unisex</a>
+              <a href="etalaseunisex.html" class="btn">Unisex</a>
             </div>
           </div>
         </div>
@@ -252,9 +272,11 @@
           <div class="brand"><h3>V E L V E T &nbsp G A Z E</h3></div>
           <p class="footer-company-about">
             <span>About the company</span>
-            <strong>Velvet Gaze</strong> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Voluptatum placeat dolorem inventore amet soluta!
-            Ratione, distinctio in. Quas, porro dicta..
+            <strong>Velvet Gaze</strong> Velvet Gaze adalah destinasi utama bagi para pecinta fashion yang
+            menghargai elegansi, kualitas, dan gaya yang tak terlupakan. Sebagai
+            pemimpin dalam industri fashion, Velvet Gaze telah mengukir reputasi
+            yang tak tertandingi dalam menciptakan pakaian yang memadukan
+            keanggunan klasik dengan tren modern.
           </p>
         </div>
 
@@ -267,15 +289,6 @@
                 <li><a href="#">Kategori</a></li>
                 <li><a href="#">Tentang Kami</a></li>
                 <li><a href="#">Bantuan</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Produk</h4>
-              <ul>
-                <li><a href="#">Baju</a></li>
-                <li><a href="#">Celana</a></li>
-                <li><a href="#">Rok</a></li>
-                <li><a href="#">Kemeja</a></li>
               </ul>
             </div>
           </div>
@@ -327,7 +340,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-      nomodule
+      
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </body>
