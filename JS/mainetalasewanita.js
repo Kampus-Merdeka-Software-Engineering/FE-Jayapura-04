@@ -17,76 +17,76 @@ signupLink.onclick = () => {
 };
 
 // etalase wanita
-const produk = [
-  {
-    productId: 1,
-    name: "Ruffle Blouse",
-    img: "imgg/Ruffle Blouse.jpg",
-    price: "Rp171.000",
-  },
-  {
-    productId: 2,
-    name: "Ruffle Blouse pt 2",
-    img: "imgg/Ruffle blouse pt2.jpg",
-    price: "Rp171.000",
-  },
-  {
-    productId: 3,
-    name: "Cute Top",
-    img: "imgg/Cute top.png",
-    price: "Rp191.000",
-  },
-  {
-    productId: 4,
-    name: "Square Top",
-    img: "imgg/Square top.png",
-    price: "Rp181.000",
-  },
-  {
-    productId: 5,
-    name: "Cool Sweatshirt",
-    img: "imgg/Cool sweatshirt.jpg",
-    price: "Rp161.000",
-  },
-  {
-    productId: 6,
-    name: "Pink Wow",
-    img: "imgg/Pink wow.jpg",
-    price: "Rp191.000",
-  },
-  {
-    productId: 7,
-    name: "Navy You",
-    img: "imgg/Navy You.png",
-    price: "Rp151.000",
-  },
-  {
-    productId: 8,
-    name: "Butterfly Jogger",
-    img: "imgg/Butterfly jogger.png",
-    price: "Rp191.000",
-  },
-];
+// const produk = [
+//   {
+//     productId: 1,
+//     name: "Ruffle Blouse",
+//     img: "imgg/Ruffle Blouse.jpg",
+//     price: "Rp171.000",
+//   },
+//   {
+//     productId: 2,
+//     name: "Ruffle Blouse pt 2",
+//     img: "imgg/Ruffle blouse pt2.jpg",
+//     price: "Rp182.000",
+//   },
+//   {
+//     productId: 3,
+//     name: "Cute Top",
+//     img: "imgg/Cute top.png",
+//     price: "Rp191.000",
+//   },
+//   {
+//     productId: 4,
+//     name: "Square Top",
+//     img: "imgg/Square top.png",
+//     price: "Rp181.000",
+//   },
+//   {
+//     productId: 5,
+//     name: "Cool Sweatshirt",
+//     img: "imgg/Cool sweatshirt.jpg",
+//     price: "Rp161.000",
+//   },
+//   {
+//     productId: 6,
+//     name: "Pink Wow",
+//     img: "imgg/Pink wow.jpg",
+//     price: "Rp191.000",
+//   },
+//   {
+//     productId: 7,
+//     name: "Navy You",
+//     img: "imgg/Navy You.png",
+//     price: "Rp151.000",
+//   },
+//   {
+//     productId: 8,
+//     name: "Butterfly Jogger",
+//     img: "imgg/Butterfly jogger.png",
+//     price: "Rp191.000",
+//   },
+// ];
 
-function bikinCardEtalase(produknya) {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  card.innerHTML = `
-          <div class="card">
-            <img class="product-img" src="${produknya.img}">
-            <h3>${produknya.name}</h3>
-            <h6>${produknya.price}</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            <a href="deskripsiproduk.html"><button class="buy">More</button></a>
-          </div>`;
-  return card;
-}
+// function bikinCardEtalase(produknya) {
+//   const card = document.createElement("div");
+//   card.classList.add("card");
+//   card.innerHTML = `
+//           <div class="card">
+//             <img class="product-img" src="${produknya.img}">
+//             <h3>${produknya.name}</h3>
+//             <h6>${produknya.price}</h6>
+//             <ul>
+//               <li><i class="fa fa-star checked"></i></li>
+//               <li><i class="fa fa-star checked"></i></li>
+//               <li><i class="fa fa-star checked"></i></li>
+//               <li><i class="fa fa-star checked"></i></li>
+//               <li><i class="fa fa-star checked"></i></li>
+//             </ul>
+//             <a href="deskripsiproduk.html"><button class="buy">More</button></a>
+//           </div>`;
+//   return card;
+// }
 
 function tambahEtalase() {
   const etalaseProduk = document.querySelector(".etalase");
@@ -180,4 +180,55 @@ document.addEventListener("click", function (e) {
   if (!help.contains(e.target) && !bantuan.contains(e.target)) {
     bantuan.classList.remove("active");
   }
+});
+
+
+// Pemanggilan pakaian/wanita di backend
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("halaman telah dimuat");
+  // Memanggil data dari backend
+  fetch('http://localhost:3000/pakaian/wanita', {
+    method: 'GET',
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Mengambil produk dari respons JSON
+      const produk = data.data;
+
+      // Menghapus semua elemen anak di dalam .etalase
+      const etalaseProduk = document.querySelector(".etalase");
+      etalaseProduk.innerHTML = "";
+
+      // Loop melalui produk dan membuat kartu (card) hanya dengan name, price, dan img
+      produk.forEach((produknya) => {
+        // Membuat elemen card
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+          <div class="card">
+            <img class="product-img" src="${produknya.img}">
+            <h3>${produknya.name}</h3>
+            <h6>Rp ${produknya.price}</h6>
+            <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+            </ul>
+            <a href="deskripsiproduk.html"><button class="buy">More</button></a>
+          </div>`;
+        
+        // Menambahkan card ke dalam .etalase
+        etalaseProduk.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      console.error('Ada kesalahan saat mengambil data produk:', error);
+    });
 });
