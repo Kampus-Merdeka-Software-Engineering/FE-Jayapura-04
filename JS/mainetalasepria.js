@@ -124,7 +124,7 @@ document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-// klik di luar sidebar menghilangkan nav
+// klik di luar sidebar menghilangkan
 const hamburger = document.querySelector("#hamburger-menu");
 
 document.addEventListener("click", function (e) {
