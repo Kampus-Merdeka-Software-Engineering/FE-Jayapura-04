@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Velvet Gaze</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <!--<link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -30,8 +30,10 @@
         </div>
         <div class="navbar-ekstra">
           <a href="#" id="search"><i data-feather="search"></i></a>
-          <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-            <span id="cart-count">0</span>
+          <a href="#" id="shopping-cart"
+            ><i data-feather="shopping-cart"></i
+          ></a>
+          <span id="cart-count">0</span>
           <a href="#" id="user"><i data-feather="user"></i></a>
           <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
@@ -80,35 +82,35 @@
 
       <div class="cart-popup" id="cartPopup">
         <div class="cart">
-            <div id="addto-chart">
-                <div id="sidebar">
-                    <div class="head"><h4>Keranjang Saya</h4></div>
-                    <div class="tambahkekeranjang">
-                        <table id="keranjangbelanja">
-                            <tr id="keranjang-kosong" style="display: none;">
-                                <td colspan="6">Produk belum dipilih</td>
-                            </tr>
-                            <tr>
-                                <th>Produk</th>
-                                <th>Nama</th>
-                                <th>Ukuran</th>
-                                <th>Jumlah</th>
-                                <th>Harga</th>
-                            </tr>
-                            <!-- Isi keranjang belanja akan ditampilkan di sini -->
-                        </table>
-                    </div>
-                    <div class="foot">
-                        <h4>Total</h4>
-                        <h4 id="total">Rp 0</h4>
-                    </div>
-                </div>
-                <div id="shopping-now">
-                    <button><a href="#" class="now">Belanja Sekarang</a></button>
-                </div>
+          <div id="addto-chart">
+            <div id="sidebar">
+              <div class="head"><h4>Keranjang Saya</h4></div>
+              <div class="tambahkekeranjang">
+                <table id="keranjangbelanja">
+                  <tr id="keranjang-kosong" style="display: none">
+                    <td colspan="6">Produk belum dipilih</td>
+                  </tr>
+                  <tr>
+                    <th>Produk</th>
+                    <th>Nama</th>
+                    <th>Ukuran</th>
+                    <th>Jumlah</th>
+                    <th>Harga</th>
+                  </tr>
+                  <!-- Isi keranjang belanja akan ditampilkan di sini -->
+                </table>
+              </div>
+              <div class="foot">
+                <h4>Total</h4>
+                <h4 id="total">Rp 0</h4>
+              </div>
             </div>
+            <div id="shopping-now">
+              <button><a href="#" class="now">Belanja Sekarang</a></button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
       <!--bagian sliding login dan signup-->
 
@@ -145,26 +147,50 @@
             </form>
             <form action="#" class="signup" id="signupForm">
               <div class="field">
-                <input id="namalengkap" type="text" placeholder="Nama Lengkap" required>
-                <p class="error"></p> 
+                <input
+                  id="namalengkap"
+                  type="text"
+                  placeholder="Nama Lengkap"
+                  required
+                />
+                <p class="error"></p>
               </div>
               <div class="field">
-                <input id="emailup" type="text" placeholder="Masukan Email" required>
-                <p class="error"></p> 
+                <input
+                  id="emailup"
+                  type="text"
+                  placeholder="Masukan Email"
+                  required
+                />
+                <p class="error"></p>
               </div>
               <div class="field">
-                <input id="passwordup" type="password" placeholder="Masukan Password" required>
-                <p class="error" ></p> 
+                <input
+                  id="passwordup"
+                  type="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+                <p class="error"></p>
               </div>
               <div class="field">
-                <input id="password2" type="password" placeholder="Konfirmasi Password" required>
+                <input
+                  id="password2"
+                  type="password"
+                  placeholder="Konfirmasi Password"
+                  required
+                />
                 <p class="error"></p>
               </div>
               <div class="field btn">
                 <div class="btn-layer"></div>
-                <input type="submit" value="Sign Up"> 
+                <input type="submit" value="Sign Up" />
               </div>
-              <div class="signup-link">Sudah punya akun?<p id="error"></p><a href="#login">Login</a></div>
+              <div class="signup-link">
+                Sudah punya akun?
+                <p id="error"></p>
+                <a href="#login">Login</a>
+              </div>
             </form>
           </div>
         </div>
@@ -173,9 +199,7 @@
     <section class="hero" id="beranda">
       <main class="content">
         <h1>Selamat Datang!</h1>
-        <p>
-          Woy belanja di sini!!! murce bang
-        </p>
+        <p>Woy belanja di sini!!! murce bang</p>
         <a href="#kategori" class="cta">Jelajahi Sekarang</a>
       </main>
     </section>
@@ -272,11 +296,11 @@
           <div class="brand"><h3>V E L V E T &nbsp G A Z E</h3></div>
           <p class="footer-company-about">
             <span>About the company</span>
-            <strong>Velvet Gaze</strong> Velvet Gaze adalah destinasi utama bagi para pecinta fashion yang
-            menghargai elegansi, kualitas, dan gaya yang tak terlupakan. Sebagai
-            pemimpin dalam industri fashion, Velvet Gaze telah mengukir reputasi
-            yang tak tertandingi dalam menciptakan pakaian yang memadukan
-            keanggunan klasik dengan tren modern.
+            <strong>Velvet Gaze</strong> Velvet Gaze adalah destinasi utama bagi
+            para pecinta fashion yang menghargai elegansi, kualitas, dan gaya
+            yang tak terlupakan. Sebagai pemimpin dalam industri fashion, Velvet
+            Gaze telah mengukir reputasi yang tak tertandingi dalam menciptakan
+            pakaian yang memadukan keanggunan klasik dengan tren modern.
           </p>
         </div>
 
@@ -339,9 +363,6 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
