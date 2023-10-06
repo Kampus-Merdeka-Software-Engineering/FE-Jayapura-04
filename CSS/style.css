@@ -37,7 +37,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 /*start header*/
 .navbar {
@@ -952,10 +952,10 @@ p {
   border-radius: 5rem;
 }
 .akun {
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
-#horizontal {
+.horizontal {
   margin-top: 1.5rem;
   width: 100%;
   height: 2px;
@@ -974,7 +974,18 @@ p {
   top: 100%;
   right: -100%;
 }
-
+.nama-user {
+  display: flex;
+  align-items: center;
+}
+.nama-user a {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: #a0a0a0;
+}
+.nama-user a:hover {
+  color: #231f20;
+}
 .form-ulasan.active {
   right: 30%;
   transition: 0.2s;
@@ -1483,9 +1494,7 @@ a.now {
 #cartPopup {
   display: none;
 }
-.bintang {
-  width: 15px;
-}
-.bintangkosong {
-  width: 15px;
+
+#bintang-kecil {
+  width: 40%;
 }

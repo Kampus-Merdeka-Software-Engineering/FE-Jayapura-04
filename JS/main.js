@@ -53,14 +53,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-const carts = document.querySelector("#shopping-cart");
-
-document.addEventListener("click", function (e) {
-  if (!carts.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
-  }
-});
-
 // buat bagian login sign up pop up
 
 const wrapper = document.querySelector(".wrapper");
@@ -174,26 +166,17 @@ document.addEventListener("DOMContentLoaded", function () {
   productContainer.appendChild(productElement);
 });
 
-const bantuan = document.querySelector(".bantuan");
+let bantuan = document.querySelector(".bantuan");
 
 document.querySelector("#bantuan").onclick = () => {
   bantuan.classList.toggle("active");
 };
 
-const cancel = document.querySelector(".bantuan");
+let cancel = document.querySelector(".bantuan");
 
 document.querySelector("#cancel").onclick = () => {
   cancel.classList.remove("active");
 };
-
-// klik di luar sidebar menghilangkan nav
-const help = document.querySelector("#bantuan");
-
-document.addEventListener("click", function (e) {
-  if (!help.contains(e.target) && !bantuan.contains(e.target)) {
-    bantuan.classList.remove("active");
-  }
-});
 
 function tampilGambar() {
   var gambarBesar = document.getElementById("besarImg");
@@ -209,20 +192,37 @@ function tampilGambar() {
   }
 }
 
-const tambahKeKeranjangButton = document.getElementById("tambah-keranjang");
-const gambarProduk = product.img;
-const namaProduk = product.name;
-const ukuranProduk = product.sizes;
-const jumlahProduk = 2;
-const hargaProdukText = product.price;
-function tambahKeranjang() {
-  const keranjangBelanja = [];
-  console.log("tambahKeranjang");
+// Menangani klik tombol "X" pada item di keranjang belanja
+function hapusItem(button, namaProduk) {
+  const index = keranjangBelanja.findIndex((item) => item.nama === namaProduk);
+  if (index !== -1) {
+    keranjangBelanja.splice(index, 1);
 
+    const cartCountElement = document.getElementById("cart-count");
+    const cartCount = parseInt(cartCountElement.textContent);
+    const jumlahProdukDiKeranjang = keranjangBelanja.reduce(
+      (total, item) => total + item.jumlah,
+      0
+    );
+    cartCountElement.textContent = jumlahProdukDiKeranjang.toString();
+
+    updateKeranjangBelanja();
+  }
+}
+const keranjangBelanja = []; // Deklarasikan variabel keranjangBelanja di luar fungsi
+
+//console.log(gambarProduk);
+function tambahKeranjang() {
+  var gambarBesar = document.getElementById("besarImg");
+  const tambahKeKeranjangButton = document.getElementById("tambah-keranjang");
+  const gambarProduk = gambarBesar.getAttribute("src");
+  const namaProduk = document.getElementById("nama-produk").textContent;
+  const ukuranProduk = document.getElementById("ukuranbaju").value;
+  const jumlahProduk = parseInt(document.getElementById("jumlah-produk").value);
+  const hargaProdukText = document.getElementById("harga-produk").textContent;
   const hargaProduk = parseInt(
     hargaProdukText.replace("Rp ", "").replace(".", "")
   );
-
   const totalHargaProduk = hargaProduk * jumlahProduk;
 
   const produkSama = keranjangBelanja.find(
@@ -241,6 +241,7 @@ function tambahKeranjang() {
       harga: hargaProdukText,
       totalHarga: totalHargaProduk,
     });
+    console.log(keranjangBelanja);
   }
 
   updateKeranjangBelanja();
@@ -253,13 +254,13 @@ function tambahKeranjang() {
 // Fungsi untuk mengupdate keranjang belanja
 function updateKeranjangBelanja() {
   console.log("updateKeranjangBelanja()");
-  const keranjangBelanja = [];
+
   const tbodyKeranjang = document.querySelector("#keranjangbelanja tbody");
 
   tbodyKeranjang.innerHTML = "";
 
   let totalHarga = 0;
-
+  console.log(keranjangBelanja);
   keranjangBelanja.forEach((item) => {
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
@@ -269,7 +270,7 @@ function updateKeranjangBelanja() {
             <td>${item.jumlah}</td>
             <td>${item.harga}</td>
         `;
-
+    console.log(newRow);
     tbodyKeranjang.appendChild(newRow);
 
     const deleteButton = document.createElement("button");
@@ -296,64 +297,52 @@ function updateKeranjangBelanja() {
   } else {
     cartPopup.style.display = "block";
   }
+
+  return updateKeranjangBelanja;
 }
 
-// var gambarBesar = document.getElementById("besarImg");
-// var daftarGambarKecil = document.getElementsByClassName("kecilImg");
-
-// var indeksGambar = 0;
-
-// for (var i = 0; i < daftarGambarKecil.length; i++) {
-//   daftarGambarKecil[i].addEventListener("click", function () {
-//     gambarBesar.src = this.src;
-//     gambarBesar.alt = this.alt;
-//   });
-// }
 //fungsi tambah ulasan
 
 function tambahUlasan() {
   let selengkapnya = document.querySelector(".form-ulasan");
+  selengkapnya.classList.toggle("active");
 
-  document.querySelector("#selengkapnya").onclick = () => {
-    selengkapnya.classList.toggle("active");
-  };
-  let cancelulasan = document.querySelector(".form-ulasan");
-
-  document.querySelector("#cancelulasan").onclick = () => {
-    cancelulasan.classList.remove("active");
+  document.getElementById("edit").onclick = () => {
+    editUlasan.classList.toggle("active");
   };
 }
+function tutupUlasan() {
+  let cancelulasan = document.querySelector(".form-ulasan");
+  cancelulasan.classList.remove("active");
+}
 
-const allStar = document.querySelectorAll(".rating .star");
-const ratingValue = document.querySelector(".rating input");
+// Mengambil semua elemen bintang
+const stars = document.querySelectorAll(".star");
 
-allStar.forEach((item, idx) => {
-  item.addEventListener("click", function () {
-    let click = 0;
-    ratingValue.value = idx + 1;
-
-    allStar.forEach((i) => {
-      i.classList.replace("bxs-star", "bx-star");
-      i.classList.remove("active");
-    });
-    for (let i = 0; i < allStar.length; i++) {
-      if (i <= idx) {
-        allStar[i].classList.replace("bx-star", "bxs-star");
-        allStar[i].classList.add("active");
+// Menggunakan event listener untuk setiap bintang
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    // Mengatur semua bintang sebelumnya menjadi abu
+    stars.forEach((s, i) => {
+      if (i <= index) {
+        s.style.color = "#ffdd00"; // Warna bintang yang diklik
       } else {
-        allStar[i].style.setProperty("--i", click);
-        click++;
+        s.style.color = "gray"; // Warna bintang yang belum diklik
       }
-    }
+    });
+
+    // Memasukkan nilai rating yang diklik ke input
+    const ratingInput = document.querySelector('input[name="rating"]');
+    ratingInput.value = index + 1; // Index dimulai dari 0, jadi ditambah 1
   });
 });
 
-/*
 // Mengambil elemen form ulasan
 const formUlasan = document.getElementById("form-ulasan");
+const tombolSubmit = document.getElementById("submit-ulasan");
 
 // Mengambil elemen ulasan produk
-const ulasanProduk = document.getElementById("ulasan-produk");
+const ulasanProduk = document.getElementById("ulasan-display");
 
 // Mengikat event submit pada form ulasan
 formUlasan.addEventListener("submit", function (event) {
@@ -362,202 +351,69 @@ formUlasan.addEventListener("submit", function (event) {
   // Mengambil nilai username, rating, dan ulasan yang diisi oleh pengguna
   const usernameInput = document.getElementById("username");
   const ulasanInput = document.getElementById("opinion");
+  const ratingInput = document.querySelector('input[name="rating"]:checked');
 
   // Mengekstrak nilai dari elemen-elemen input
   const username = usernameInput.value;
   const ulasan = ulasanInput.value;
-  const ratingNilai = ratingValue.value;
+  const ratingValue = ratingInput ? parseInt(ratingInput.value) : 0;
 
   console.log("Username:", username);
-  console.log("Rating:", ratingNilai);
+  console.log("Rating:", ratingValue);
   console.log("Ulasan:", ulasan);
+  // Mengosongkan input setelah pengguna mengirim ulasan
+  usernameInput.value = "";
+  ulasanInput.value = "";
+  // Mengosongkan input rating
+  const radioButtons = document.querySelectorAll('input[name="rating"]');
+  radioButtons.forEach((radio) => {
+    radio.checked = false;
+  });
+  // Mengatur semua bintang menjadi abu setelah mengirim ulasan
+  stars.forEach((star) => {
+    star.style.color = "gray";
+  });
+  // Menyembunyikan form setelah pengguna mengirim ulasan
+  const formUlasan = document.getElementById("form-ulasan");
+  //formUlasan.style.display = "none";
+  // Buat elemen untuk menampilkan ulasan
+  const ulasanItem = document.getElementById("ulasan-produk");
+  //ulasanItem.classList.add("ulasan-produk");
 
-  const ulasanItem = document.createElement("div");
-  ulasanItem.classList.add("ulasan-produk");
-  const ratingElement = document.createElement("div");
+  // Buat elemen-elemen untuk menampilkan username, rating, dan ulasan
+  const usernameElement = document.getElementById("nama-user");
+  const ratingElement = document.getElementById("bintang-kecil");
+  const ulasanTekstualElement = document.getElementById("opini-user");
+  const garisHorizontal = document.getElementById("horizontal");
+
+  // Membuat gambar bintang berdasarkan nilai rating
   let ratingStars = "";
-  for (let i = 1; i <= ratingNilai.length; i++) {
-    ratingStars +=
-      '<img src="img/bintang.png" alt="Filled Star" class="bintang">';
-    console.log("ratingStars");
+  for (let i = 1; i <= 5; i++) {
+    if (i <= ratingValue) {
+      ratingStars +=
+        '<img src="img/bintang.png" alt="Filled Star" class="bintang">';
+    } else {
+      ratingStars +=
+        '<img src="img/bintangkosong.png" alt="Empty Star" class="bintangkosong">';
+    }
   }
 
+  // Menetapkan nilai ke elemen-elemen yang dibuat
+  usernameElement.innerHTML = `<div class="nama-user" id="nama-user"><h5>${username}</h5><a href="#" id="edit" onclick="gantiUlasan()">Edit</a></div> `;
   ratingElement.innerHTML = ratingStars;
+  ulasanTekstualElement.innerHTML = `<p>${ulasan}</p>`;
+  garisHorizontal.innerHTML = `<div class ="horizontal" id="horizontal"></div>`;
+
+  // Menambahkan elemen-elemen ke ulasanItem
+  ulasanItem.appendChild(usernameElement);
   ulasanItem.appendChild(ratingElement);
+  ulasanItem.appendChild(ulasanTekstualElement);
+  ulasanItem.appendChild(garisHorizontal);
+
+  // Menambahkan ulasanItem ke ulasanProduk
+  ulasanProduk.appendChild(ulasanItem);
 });
-// function createUlasanElement() {
-//   const ulasan = document.createElement("div");
-//   ulasan.innerHTML = `<section class="ulasan">
-//   <div class="ulasan-produk">
-//     <img src="../img/org1.jpg" alt="avatar" class="avatar" />
-//     <div class="akun">
-//       <h5>Michelle</h5>
-//       <div class="star">
-//         <i class="bx bxs-star"></i>
-//         <i class="bx bxs-star"></i>
-//       </div>
-//     </div>
-//   </div>
-//   <p>
-//     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima
-//     fuga aut dicta. Ex quae earum delectus voluptatibus vitae eos blanditiis
-//     asperiores exercitationem sed, quaerat obcaecati magnam sunt a fugiat
-//     eaque impedit laboriosam iste repudiandae facilis accusamus quis,
-//     dignissimos, temporibus repellat. Fugiat molestiae magnam totam officia
-//     qui, maiores maxime dolorum
-//   </p>
-//   <div id="horizontal"></div>
-// </section>`;
-//   return ulasan;
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const productElement = createProductElement(product);
-//   const ulasanContainer = document.getElementById("deskripsi-produk");
-//   ulasanContainer.appendChild(productElement);
-// });
-
-// // Ambil elemen gambar besar dan daftar gambar kecil
-// var gambarBesar = document.getElementById("besarImg");
-// var daftarGambarKecil = document.getElementsByClassName("kecilImg");
-
-// var indeksGambar = 0;
-
-// for (var i = 0; i < daftarGambarKecil.length; i++) {
-//   daftarGambarKecil[i].addEventListener("click", function() {
-//     gambarBesar.src = this.src;
-//     gambarBesar.alt = this.alt;
-//   });
-// }
-
-// // Inisialisasi keranjang belanja
-// const keranjangBelanja = [];
-
-// const tambahKeKeranjangButton = document.getElementById("tambah-keranjang");
-// tambahKeKeranjangButton.addEventListener("click", function (e) {
-//     e.preventDefault();
-
-//     const gambarProduk = document.getElementById("besarImg").getAttribute("src");
-//     const namaProduk = document.getElementById("nama-produk").textContent;
-//     const ukuranProduk = document.getElementById("ukuranbaju").value;
-//     const jumlahProduk = parseInt(document.getElementById("jumlah-produk").value);
-//     const hargaProdukText = document.getElementById("harga-produk").textContent;
-
-//     const hargaProduk = parseInt(hargaProdukText.replace("Rp ", "").replace(".", ""));
-
-//     const totalHargaProduk = hargaProduk * jumlahProduk;
-
-//     const produkSama = keranjangBelanja.find((produk) => produk.nama === namaProduk);
-
-//     if (produkSama) {
-//         produkSama.jumlah += jumlahProduk;
-//         produkSama.totalHarga += totalHargaProduk;
-//     } else {
-//         keranjangBelanja.push({
-//             gambar: gambarProduk,
-//             nama: namaProduk,
-//             ukuran: ukuranProduk,
-//             jumlah: jumlahProduk,
-//             harga: hargaProdukText,
-//             totalHarga: totalHargaProduk,
-//         });
-//     }
-
-//     updateKeranjangBelanja();
-
-//     const cartCountElement = document.getElementById("cart-count");
-//     const cartCount = parseInt(cartCountElement.textContent);
-//     cartCountElement.textContent = (cartCount + jumlahProduk).toString();
-// });
-
-// // Menangani klik tombol "X" pada item di keranjang belanja
-// function hapusItem(button, namaProduk) {
-//   const index = keranjangBelanja.findIndex((item) => item.nama === namaProduk);
-//   if (index !== -1) {
-//       keranjangBelanja.splice(index, 1);
-
-//       const cartCountElement = document.getElementById("cart-count");
-//       const cartCount = parseInt(cartCountElement.textContent);
-//       const jumlahProdukDiKeranjang = keranjangBelanja.reduce(
-//           (total, item) => total + item.jumlah,
-//           0
-//       );
-//       cartCountElement.textContent = jumlahProdukDiKeranjang.toString();
-
-//       updateKeranjangBelanja();
-//   }
-// }
-
-// // Fungsi untuk mengupdate keranjang belanja
-// function updateKeranjangBelanja() {
-//     const tbodyKeranjang = document.querySelector("#keranjangbelanja tbody");
-
-//     tbodyKeranjang.innerHTML = "";
-
-//     let totalHarga = 0;
-
-//     keranjangBelanja.forEach((item) => {
-//         const newRow = document.createElement("tr");
-//         newRow.innerHTML = `
-//             <td><img src="${item.gambar}" alt="${item.nama}" class="keranjang-gambar-kecil"></td>
-//             <td>${item.nama}</td>
-//             <td>${item.ukuran}</td>
-//             <td>${item.jumlah}</td>
-//             <td>${item.harga}</td>
-//         `;
-
-//         tbodyKeranjang.appendChild(newRow);
-
-//         const deleteButton = document.createElement("button");
-//         deleteButton.textContent = "X";
-//         deleteButton.className = "hapus-item";
-//         deleteButton.addEventListener("click", function () {
-//             hapusItem(this, item.nama);
-//         });
-//         newRow.appendChild(deleteButton);
-
-//         totalHarga += item.totalHarga;
-//     });
-
-//     // Menampilkan total harga dalam format "Rp. 100.000"
-//     const formattedTotalHarga = `Rp. ${totalHarga.toLocaleString()}`;
-//     const totalElement = document.getElementById("total");
-//     totalElement.textContent = formattedTotalHarga;
-
-//     const cartPopup = document.getElementById("cartPopup");
-//     const cartCount = document.getElementById("cart-count").textContent;
-
-//     if (parseInt(cartCount) === 0) {
-//         cartPopup.style.display = "none";
-//     } else {
-//         cartPopup.style.display = "block";
-//     }
-// }
-
-// // Menangani klik tombol "Submit" pada formulir ulasan
-// const submitUlasanButton = document.getElementById('submit-ulasan');
-// submitUlasanButton.addEventListener('click', function(e) {
-//     e.preventDefault();
-
-//     const usernameInput = document.getElementById('username');
-//     const ulasanInput = document.getElementById('opinion');
-//     const ratingInput = document.querySelector('input[name="rating"]:checked');
-
-//     const username = usernameInput.value;
-//     const ulasan = ulasanInput.value;
-//     const rating = ratingInput ? ratingInput.value : 'Tidak Ada Rating';
-
-//     // Memasukkan nilai username, ulasan, dan rating ke dalam elemen HTML yang sesuai
-//     const ulasanUsername = document.getElementById('ulasan-username');
-//     const ulasanTekstual = document.getElementById('ulasan-tekstual');
-//     const ulasanRating = document.getElementById('ulasan-rating');
-//     ulasanUsername.textContent = `${username}`;
-//     ulasanRating.textContent = `${rating}`;
-//     ulasanTekstual.textContent = `${ulasan}`;
-
-//     const ulasanTerkirim = document.querySelector('.ulasan');
-//     ulasanTerkirim.style.display = 'block';
-
-//     usernameInput.value = '';
-//     ulasanInput.value = '';
-// });*/
+function gantiUlasan() {
+  let editulasan = document.querySelector(".form-ulasan");
+  editulasan.classList.toggle("active");
+}
