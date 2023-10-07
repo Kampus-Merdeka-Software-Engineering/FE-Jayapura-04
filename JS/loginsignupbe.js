@@ -1,12 +1,18 @@
 var btn = document.getElementById ("submit")
-var namaLengkap = document.getElementById("namaLengkap")
-var emailup = document.getElementById("emailup")
-var password = document.getElementById("password1")
-var password2 = document.getElementById("password2")
+
 
 btn.addEventListener("submit", signup);
 
-function signup() {
+function signup(event) {
+
+    event.preventDefault();
+
+    // Ambil data dari form
+    const form = event.target;
+    var namaLengkap = form.querySelector('[name="namaLengkap"]').value;
+    var emailup = document.getElementById("emailup")
+    var password = document.getElementById("password1")
+    var password2 = document.getElementById("password2")
     fetch("http://localhost:3000/submitSignup", {
             method: "POST",
             headers: {
