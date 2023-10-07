@@ -4,10 +4,10 @@ var emailup = document.getElementById("emailup")
 var password = document.getElementById("password1")
 var password2 = document.getElementById("password2")
 
-btn.addEventListener("click", signup);
+btn.addEventListener("submit", signup);
 
 function signup() {
-    fetch("http://localhost:3000/signup", {
+    fetch("http://localhost:3000/submitSignup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
