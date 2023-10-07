@@ -127,14 +127,15 @@
             <div class="slider-tab"></div>
           </div>
           <div class="form-inner">
-            <form action="#" class="login">
+            <form action="#" class="login" id="loginForm">
               <pre></pre>
               <div class="field">
-                <input type="email" placeholder="Masukan Email " required />
+                <input type="email" name="email" placeholder="Masukan Email " required />
               </div>
               <div class="field">
                 <input
                   type="password"
+                  name="password"
                   placeholder="Masukan Password"
                   required
                 />
@@ -163,6 +164,7 @@
                   id="emailup"
                   type="text"
                   placeholder="Masukan Email"
+                  name="emailup"
                   required
                 />
                 <p class="error"></p>
@@ -171,6 +173,7 @@
                 <input
                   id="passwordup"
                   type="password"
+                  name="password"
                   placeholder="Masukan Password"
                   required
                 />
@@ -180,6 +183,7 @@
                 <input
                   id="password2"
                   type="password"
+                  name="password2"
                   placeholder="Konfirmasi Password"
                   required
                 />

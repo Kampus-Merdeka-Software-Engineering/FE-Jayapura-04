@@ -1,4 +1,4 @@
-var btn = document.getElementById ("submit")
+var btn = document.getElementById ("signupForm")
 
 
 btn.addEventListener("submit", signup);
@@ -10,18 +10,17 @@ function signup(event) {
     // Ambil data dari form
     const form = event.target;
     var namaLengkap = form.querySelector('[name="namaLengkap"]').value;
-    var emailup = document.getElementById("emailup")
-    var password = document.getElementById("password1")
-    var password2 = document.getElementById("password2")
-    fetch("http://localhost:3000/submitSignup", {
+    var emailup = form.querySelector('[name="emailup"]').value;
+    var password = form.querySelector('[name="password"]').value;
+    fetch("http://localhost:3000/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                namaLengkap: namaLengkap.value,
-                email: email.value,
-                password: password.value,
+                namaLengkap: namaLengkap,
+                email: emailup,
+                password: password,
             })
         })
         .then(function (response) {
@@ -38,21 +37,26 @@ function signup(event) {
 }
 
 // buat login
-var btn = document.getElementById("buttonLogin")
-var email = document.getElementById("email")
-var password = document.getElementById("password")
+var btn = document.getElementById("loginForm")
 
-btn.addEventListener("click", login);
+btn.addEventListener("submit", login);
 
-function login() {
+function login(event) {
+
+    event.preventDefault();
+
+    // Ambil data dari form
+    const form = event.target;
+    var email = form.querySelector('[name="email"]').value;
+    var password = form.querySelector('[name="password"]').value;
     fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                email: email.value,
-                password: password.value,
+                email: email,
+                password: password,
             })
         })
         .then(function (response) {

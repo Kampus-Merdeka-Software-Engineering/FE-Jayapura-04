@@ -17,9 +17,9 @@ function postBantuanUser(event) {
 
     // Ambil data dari form
     const form = event.target;
-    const fullName = form.querySelector('[name="fullName"]').value;
-    const email = form.querySelector('[name="email"]').value;
-    const question = form.querySelector('[name="question"]').value;
+    var fullName = form.querySelector('[name="fullName"]').value;
+    var email = form.querySelector('[name="email"]').value;
+    var question = form.querySelector('[name="question"]').value;
 
     // Buat objek data
     const data = {
@@ -27,13 +27,10 @@ function postBantuanUser(event) {
         email: email,
         question: question,
     };
-
-    // Kirim data sebagai JSON
     fetch('http://localhost:3000/bantuan', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            // Sertakan token atau informasi otentikasi lainnya di header jika diperlukan
         },
         body: JSON.stringify(data),
     })
