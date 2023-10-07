@@ -85,11 +85,11 @@ fetch(idProduk)
     return imgcolor;
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const productElement = createProductElement(product);
-    const productContainer = document.getElementById("deskripsi-produk");
-    productContainer.appendChild(productElement);
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const productElement = createProductElement(product);
+  //   const productContainer = document.getElementById("deskripsi-produk");
+  //   productContainer.appendChild(productElement);
+  // });
 
 
 //   ulasan backend
