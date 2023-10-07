@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <li><i class="fa fa-star checked"></i></li>
               <li><i class="fa fa-star checked"></i></li>
             </ul>
-            <a href="deskripsiproduk.html"><button class="buy">More</button></a>
+            <a href="deskripsiproduk.html?product-type=${produknya.type}&product_id=${produknya.id}"><button class="buy">More</button></a>
           </div>`;
         
         // Menambahkan card ke dalam .etalase

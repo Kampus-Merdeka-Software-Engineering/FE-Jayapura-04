@@ -1,6 +1,19 @@
-// Post data dari contact form
+// Fungsi untuk memeriksa status login pengguna
+function isUserLoggedIn() {
+    // Contoh: Anda menyimpan token login dalam localStorage
+    const token = localStorage.getItem('user');
+    return !!token; // Mengembalikan true jika token ada, sebaliknya false
+}
+
+// Post data dari bantuan form
 function postBantuanUser(event) {
     event.preventDefault();
+
+    // Periksa status login pengguna sebelum mengizinkan pengiriman
+    if (!isUserLoggedIn()) {
+        alert('Anda harus login atau signup terlebih dahulu.');
+        return;
+    }
 
     // Ambil data dari form
     const form = event.target;
@@ -16,10 +29,11 @@ function postBantuanUser(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch('https://api-express-railway-production.up.railway.app/contact', {
+    fetch('http://localhost:3000/bantuan', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            // Sertakan token atau informasi otentikasi lainnya di header jika diperlukan
         },
         body: JSON.stringify(data),
     })
@@ -32,11 +46,8 @@ function postBantuanUser(event) {
             alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
         }
     })
-    .catch(error => console.error('Error sending contact data:', error));
+    .catch(error => console.error('Error sending bantuan data:', error));
 }
 
 // Event listener untuk form submission
-document.querySelector('.contact-form form').addEventListener('submit', postBantuanUser);
-
-// Panggil fungsi saat halaman dimuat
-document.addEventListener('DOMContentLoaded', fetchHeaderData);
+document.querySelector('.bantuan form').addEventListener('submit', postBantuanUser);

@@ -68,9 +68,12 @@
               <input type="email" placeholder="Masukan Email " required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Masukan Password" required />
+              <input
+                type="password"
+                placeholder="Masukan Password"
+                required
+              />
             </div>
-
             <div class="field btn">
               <div class="btn-layer"></div>
               <input type="submit" value="Login" />
@@ -79,29 +82,51 @@
               Belum punya akun?<a href="">Sign Up</a>
             </div>
           </form>
-          <form action="#" class="signup">
+          <form action="#" class="signup" id="signupForm">
             <div class="field">
-              <input type="text" placeholder="Nama Lengkap" required />
-            </div>
-            <div class="field">
-              <input type="text" placeholder="Masukan Email" required />
-            </div>
-            <div class="field">
-              <input type="password" placeholder="Masukan Password" required />
+              <input
+                id="namalengkap"
+                type="text"
+                placeholder="Nama Lengkap"
+                required
+              />
+              <p class="error"></p>
             </div>
             <div class="field">
               <input
+                id="emailup"
+                type="text"
+                placeholder="Masukan Email"
+                required
+              />
+              <p class="error"></p>
+            </div>
+            <div class="field">
+              <input
+                id="passwordup"
+                type="password"
+                placeholder="Masukan Password"
+                required
+              />
+              <p class="error"></p>
+            </div>
+            <div class="field">
+              <input
+                id="password2"
                 type="password"
                 placeholder="Konfirmasi Password"
                 required
               />
+              <p class="error"></p>
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
               <input type="submit" value="Sign Up" />
             </div>
             <div class="signup-link">
-              Sudah punya akun? <a href="">Login</a>
+              Sudah punya akun?
+              <p id="error"></p>
+              <a href="#login">Login</a>
             </div>
           </form>
         </div>
@@ -152,6 +177,8 @@
     </script>
 
     <script src="JS/mainetalasewanita.js"></script>
+    <script src="JS/loginsignupbe.js"></script>
+    <script src="JS/bantuanbe.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
