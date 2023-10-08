@@ -61,14 +61,15 @@
           <div class="slider-tab"></div>
         </div>
         <div class="form-inner">
-          <form action="#" class="login">
+          <form action="#" class="login" id="loginForm">
             <pre></pre>
             <div class="field">
-              <input type="email" placeholder="Masukan Email " required />
+              <input type="email" name="email" placeholder="Masukan Email " required />
             </div>
             <div class="field">
               <input
                 type="password"
+                name="password"
                 placeholder="Masukan Password"
                 required
               />
@@ -87,6 +88,7 @@
                 id="namalengkap"
                 type="text"
                 placeholder="Nama Lengkap"
+                name="namaLengkap"
                 required
               />
               <p class="error"></p>
@@ -96,6 +98,7 @@
                 id="emailup"
                 type="text"
                 placeholder="Masukan Email"
+                name="emailup"
                 required
               />
               <p class="error"></p>
@@ -104,6 +107,7 @@
               <input
                 id="passwordup"
                 type="password"
+                name="password"
                 placeholder="Masukan Password"
                 required
               />
@@ -113,6 +117,7 @@
               <input
                 id="password2"
                 type="password"
+                name="password2"
                 placeholder="Konfirmasi Password"
                 required
               />
@@ -120,7 +125,7 @@
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
-              <input type="submit" value="Sign Up" />
+              <input type="submit" id="submitSignup" value="Sign Up" />
             </div>
             <div class="signup-link">
               Sudah punya akun?
@@ -134,16 +139,16 @@
 
     <!--bantuan-->
     <div class="bantuan">
-      <form>
+      <form >
         <h3>Ask Question</h3>
         <div class="id">
           <label for="Fullname"
-            >Full Name <input type="text" placeholder="Ex: Tiara Andini "
+            >Full Name <input type="text" name="fullname" placeholder="Ex: Tiara Andini "
           /></label>
         </div>
         <div class="id">
           <label for="Email"
-            >Email <input type="Email" placeholder="Ex: Tiara123@gmail.com"
+            >Email <input type="Email" name="email" placeholder="Ex: Tiara123@gmail.com"
           /></label>
         </div>
         <label for="Question"
@@ -170,6 +175,7 @@
         </div>
       </form>
     </div>
+
 <footer class="footer-distributed">
       <!-- <div class="footer"> -->
       <div class="footer-left">
