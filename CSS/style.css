@@ -1125,10 +1125,10 @@ footer {
     padding-top: 40px;
   }
 }
-.footer {
+/* .footer {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 .footer-distributed {
   background-color: #231f20;
   box-sizing: border-box;
@@ -1147,6 +1147,7 @@ footer {
 }
 
 /* Footer left */
+
 .footer-left img {
   width: 30%;
 }
@@ -1165,10 +1166,6 @@ footer {
   margin: 0;
 }
 
-.footer-distributed h3 span {
-  color: #e0ac1c;
-}
-
 /* Footer links */
 
 .footer-distributed .footer-company-name {
@@ -1181,8 +1178,7 @@ footer {
 
 /*footer center*/
 .footer-center .fitur {
-  display: flex;
-  margin-left: 2rem;
+  margin-left: 10rem;
   justify-content: center;
 }
 .footer-distributed .footer-center {
@@ -1353,6 +1349,35 @@ footer {
 
   .navbar .navbar-nav.active {
     right: 0;
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    margin-left: 0;
+    text-align: left;
+    display: flex;
+  }
+  .brand h3 {
+    text-align: center;
+  }
+  .footer-right .kontak {
+    display: block;
+    width: 100%;
+  }
+  .footer-center .fitur {
+    margin-left: 0;
+    text-align: left;
+    justify-content: center;
+  }
+  .bantuan {
+    width: fit-content;
+    right: 50%;
   }
 }
 /* hp */
