@@ -17,7 +17,9 @@ fetch(idProduk)
   .then(product => {
     // Menampilkan data produk di konsol
     console.log('Data Produk:', product);
-    createProductElement(product);
+    const productElement = createProductElement(product);
+    const productContainer = document.getElementById("deskripsi-produk");
+    productContainer.appendChild(productElement);
   })
   .catch((error) => {
     console.error('Ada kesalahan saat mengambil data produk:', error);
@@ -74,6 +76,7 @@ fetch(idProduk)
   }
 
   function createColorOptions(colors) {
+    console.log(colors);
     let imgcolor = "";
     colors.forEach((color) => {
       imgcolor += `<img
