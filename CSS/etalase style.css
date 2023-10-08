@@ -17,10 +17,6 @@ h2 {
   margin-bottom: 5rem;
 }
 
-body {
-  min-height: 2000px;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -531,6 +527,10 @@ footer {
 .footer-left img {
   width: 30%;
 }
+.footer-left p {
+  text-align: justify;
+  font-size: 1.5rem;
+}
 
 .footer-distributed .footer-left {
   width: 30%;
@@ -683,6 +683,15 @@ footer {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.footer-right span {
+  color: #4383ff;
+  text-align: justify;
+  cursor: pointer;
+}
+
+span:hover {
+  color: #0055ff;
 }
 /*footer end*/
 
