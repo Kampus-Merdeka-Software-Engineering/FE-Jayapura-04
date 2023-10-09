@@ -27,7 +27,7 @@ function postBantuanUser(event) {
         email: email,
         question: question,
     };
-    fetch('http://localhost:3000/bantuan', {
+    fetch('https://be-jayapura-04-production.up.railway.app/bantuan', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

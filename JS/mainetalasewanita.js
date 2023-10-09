@@ -25,7 +25,6 @@ function tambahEtalase() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("halaman telah dimuat");
   tambahEtalase();
 });
 
@@ -113,9 +112,8 @@ document.addEventListener("click", function (e) {
 
 // Pemanggilan pakaian/wanita di backend
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("halaman telah dimuat");
   // Memanggil data dari backend
-  fetch('http://localhost:3000/pakaian/wanita', {
+  fetch('https://be-jayapura-04-production.up.railway.app/pakaian/wanita', {
     method: 'GET',
   })
     .then((response) => {

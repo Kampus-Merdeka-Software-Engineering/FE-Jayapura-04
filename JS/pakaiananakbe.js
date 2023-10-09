@@ -4,7 +4,7 @@ const productType = urlParams.get('product_type');
 const productId = urlParams.get('product_id');
 
 // URL endpoint API Anda untuk mengambil data produk berdasarkan product_id
-const idProduk = `http://localhost:3000/pakaian/anak/${productId}`;
+const idProduk = `https://be-jayapura-04-production.up.railway.app/pakaian/anak/${productId}`;
 
 // Mengambil data produk dari database menggunakan fetch
 fetch(idProduk)
@@ -15,8 +15,6 @@ fetch(idProduk)
     return response.json();
   })
   .then(product => {
-    // Menampilkan data produk di konsol
-    console.log('Data Produk:', product);
     const productElement = createProductElement(product);
     const productContainer = document.getElementById("deskripsi-produk");
     productContainer.appendChild(productElement);
@@ -74,7 +72,6 @@ fetch(idProduk)
   }
 
   function createColorOptions(colors) {
-    console.log(colors);
     let imgcolor = "";
     colors.forEach((color) => {
       imgcolor += `<img

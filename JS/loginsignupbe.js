@@ -12,7 +12,7 @@ function signup(event) {
     var namaLengkap = form.querySelector('[name="namaLengkap"]').value;
     var emailup = form.querySelector('[name="emailup"]').value;
     var password = form.querySelector('[name="password"]').value;
-    fetch("http://localhost:3000/signup", {
+    fetch("https://be-jayapura-04-production.up.railway.app/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -49,7 +49,7 @@ function login(event) {
     const form = event.target;
     var email = form.querySelector('[name="email"]').value;
     var password = form.querySelector('[name="password"]').value;
-    fetch("http://localhost:3000/login", {
+    fetch("https://be-jayapura-04-production.up.railway.app/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

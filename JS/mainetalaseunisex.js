@@ -25,7 +25,6 @@ function tambahEtalase() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("halaman telah dimuat");
   tambahEtalase();
 });
 
@@ -114,9 +113,8 @@ document.addEventListener("click", function (e) {
 
 // Pemanggilan pakaian/unisex di backend
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("halaman telah dimuat");
   // Memanggil data dari backend
-  fetch('http://localhost:3000/pakaian/unisex', {
+  fetch('https://be-jayapura-04-production.up.railway.app/pakaian/unisex', {
     method: 'GET',
   })
     .then((response) => {
