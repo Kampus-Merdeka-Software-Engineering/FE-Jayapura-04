@@ -1389,6 +1389,9 @@ footer {
   .detail-produk {
     display: block;
   }
+  .deskripsi-produk .content {
+    margin-left: 0rem;
+  }
 }
 /* hp */
 @media (max-width: 450px) {
