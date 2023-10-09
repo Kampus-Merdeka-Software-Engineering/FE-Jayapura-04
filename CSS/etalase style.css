@@ -767,16 +767,21 @@ span:hover {
   .bantuan.active {
     max-width: 100%;
     right: 0;
+    top: 6%;
     z-index: 100000000;
   }
   .wrapper.active {
-    max-width: 100%;
+    max-width: fit-content;
     right: 0;
     top: 8%;
+    margin: 3rem 3rem;
   }
 
   .detail-produk {
     display: block;
+  }
+  .deskripsi-produk .content {
+    margin-left: 0rem;
   }
   .etalase {
     grid-template-columns: repeat(1, 1fr);
