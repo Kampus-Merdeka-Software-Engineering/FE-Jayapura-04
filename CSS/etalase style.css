@@ -488,7 +488,7 @@ textarea.question {
 /*footer*/
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   padding: 1.4rem 7%;
 }
