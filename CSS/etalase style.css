@@ -694,7 +694,120 @@ span:hover {
   color: #0055ff;
 }
 /*footer end*/
+.cart {
+  width: 50%;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  position: absolute;
+  background-color: #231f20;
+  right: 0;
 
+  padding: 2rem;
+
+  border-radius: 0.75rem;
+  box-shadow: 8px 8px 30px rgba(29, 29, 29, 0.5);
+  top: 15%;
+  z-index: 999;
+  color: #a0a0a0;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: 1px solid #fff;
+}
+#sidebar {
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.keranjang-gambar-kecil {
+  max-width: 70px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
+.hapus-item {
+  font-weight: bold;
+  padding: 0;
+  color: #707077;
+}
+.head h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+button.hapus-item {
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #231f20;
+  margin-top: 20px;
+}
+#keranjangbelanja th {
+  color: #fff;
+  padding: 10px;
+}
+#keranjangbelanja td {
+  padding: 10px;
+  text-align: center;
+  font-size: medium;
+}
+#total {
+  margin-top: 10px;
+  margin-left: 120px;
+}
+#hurufTotal {
+  margin-top: 10px;
+  margin-right: 120px;
+}
+
+#shopping-now button {
+  background-color: #231f20;
+}
+a.now {
+  background-color: #707077;
+  padding: 10px;
+  border-radius: 10px;
+  color: #231f20;
+  font-weight: bold;
+  font-size: medium;
+}
+.cart-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.cart-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#cart-count {
+  color: white;
+}
+#cartPopup {
+  display: none;
+}
 /* media queries*/
 /* laptop */
 @media (max-width: 1366px) {
@@ -793,6 +906,10 @@ span:hover {
   .card {
     margin-bottom: 100px;
     margin-left: 0;
+  }
+  .cart {
+    width: 90%;
+    top: 13%;
   }
 }
 /* hp */
