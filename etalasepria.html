@@ -14,25 +14,189 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
-    <nav class="navbar">
-      <img src="img/Logo.jpeg" alt="Logo" />
+   <header>
+      <nav class="navbar">
+        <img src="img/Logo.jpeg" alt="Logo" />
+        <div class="navbar-nav">
+          <a href="index.html">Beranda</a>
+          <a href="kategori.html">Kategori</a>
+          <a href="tentang kami.html">Tentang Kami</a>
+          <a href="#" id="bantuan">Bantuan</a>
+        </div>
+        <div class="navbar-ekstra">
+          <a href="#" id="search"><i data-feather="search"></i></a>
+          <a href="#" id="shopping-cart"
+            ><i data-feather="shopping-cart"></i
+          ></a>
+          <span id="cart-count">0</span>
+          <a href="#" id="user"><i data-feather="user"></i></a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+        <div class="search-box">
+          <input type="search" name="" id="" placeholder="Cari" />
+        </div>
+      </nav>
 
-      <div class="navbar-nav">
-        <a href="index.html">Beranda</a>
-        <a href="kategori.html">Kategori</a>
-        <a href="tentang kami.html">Tentang Kami</a>
-        <a href="#" id="bantuan">Bantuan</a>
+      <div class="bantuan">
+        <form >
+          <h3>Ask Question</h3>
+          <div class="id">
+            <label for="Fullname"
+              >Full Name <input type="text" name="fullname" placeholder="Ex: Tiara Andini "
+            /></label>
+          </div>
+          <div class="id">
+            <label for="Email"
+              >Email <input type="Email" name="email" placeholder="Ex: Tiara123@gmail.com"
+            /></label>
+          </div>
+          <label for="Question"
+            >Question
+            <textarea
+              class="question"
+              name="question"
+              cols="30"
+              rows="5"
+              placeholder="Enter Your Question..."
+            ></textarea>
+          </label>
+          <div class="btn-group">
+            <button type="submit" class="btn submit">Submit</button>
+            <button type="reset" class="btn cancel" id="cancel">Cancel</button>
+          </div>
+          <div class="sosmed">
+            <h6>Atau</h6>
+            <div class="sosmed-icon">
+              <a href="#" id="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="#" id="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" id="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="navbar-ekstra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="user"><i data-feather="user"></i></a>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+
+      <div class="cart-popup" id="cartPopup">
+        <div class="cart">
+          <div id="addto-chart">
+            <div id="sidebar">
+              <div class="head"><h4>Keranjang Saya</h4></div>
+              <div class="tambahkekeranjang">
+                <table id="keranjangbelanja">
+                  <tr id="keranjang-kosong" style="display: none">
+                    <td colspan="6">Produk belum dipilih</td>
+                  </tr>
+                  <tr id="isi-keranjang">
+                    <th>Produk</th>
+                    <th>Nama</th>
+                    <th>Ukuran</th>
+                    <th>Jumlah</th>
+                    <th>Harga</th>
+                  </tr>
+                  <!-- Isi keranjang belanja akan ditampilkan di sini -->
+                </table>
+              </div>
+              <div class="foot">
+                <h4 id="hurufTotal">Total</h4>
+                <h4 id="total">Rp 0</h4>
+              </div>
+            </div>
+            <div id="shopping-now">
+              <button><a href="#" class="now">Belanja Sekarang</a></button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="search-box">
-        <input type="search" name="" id="" placeholder="Cari" />
+
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Log In Form</div>
+          <div class="title signup">Sign Up Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked />
+            <input type="radio" name="slide" id="signup" />
+            <label for="login" class="slide login">Log In</label>
+            <label for="signup" class="slide signup">Sign Up</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="#" class="login" id="loginForm">
+              <pre></pre>
+              <div class="field">
+                <input type="email" name="email" placeholder="Masukan Email " required />
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login" />
+              </div>
+              <div class="signup-link">
+                Belum punya akun?<a href="">Sign Up</a>
+              </div>
+            </form>
+            <form action="#" class="signup" id="signupForm">
+              <div class="field">
+                <input
+                  id="namalengkap"
+                  type="text"
+                  placeholder="Nama Lengkap"
+                  name="namaLengkap"
+                  required
+                />
+                <p class="error"></p>
+              </div>
+              <div class="field">
+                <input
+                  id="emailup"
+                  type="text"
+                  placeholder="Masukan Email"
+                  name="emailup"
+                  required
+                />
+                <p class="error"></p>
+              </div>
+              <div class="field">
+                <input
+                  id="passwordup"
+                  type="password"
+                  name="password"
+                  placeholder="Masukan Password"
+                  required
+                />
+                <p class="error"></p>
+              </div>
+              <div class="field">
+                <input
+                  id="password2"
+                  type="password"
+                  name="password2"
+                  placeholder="Konfirmasi Password"
+                  required
+                />
+                <p class="error"></p>
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" id="submitSignup" value="Sign Up" />
+              </div>
+              <div class="signup-link">
+                Sudah punya akun?
+                <p id="error"></p>
+                <a href="#login">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </nav>
+    </header>
 
     <!-- etalase  -->
 
@@ -47,134 +211,7 @@
 
     <!--bagian sliding login dan signup-->
 
-    <div class="wrapper">
-      <div class="title-text">
-        <div class="title login">Log In Form</div>
-        <div class="title signup">Sign Up Form</div>
-      </div>
-      <div class="form-container">
-        <div class="slide-controls">
-          <input type="radio" name="slide" id="login" checked />
-          <input type="radio" name="slide" id="signup" />
-          <label for="login" class="slide login">Log In</label>
-          <label for="signup" class="slide signup">Sign Up</label>
-          <div class="slider-tab"></div>
-        </div>
-        <div class="form-inner">
-          <form action="#" class="login" id="loginForm">
-            <pre></pre>
-            <div class="field">
-              <input type="email" name="email" placeholder="Masukan Email " required />
-            </div>
-            <div class="field">
-              <input
-                type="password"
-                name="password"
-                placeholder="Masukan Password"
-                required
-              />
-            </div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Login" />
-            </div>
-            <div class="signup-link">
-              Belum punya akun?<a href="">Sign Up</a>
-            </div>
-          </form>
-          <form action="#" class="signup" id="signupForm">
-            <div class="field">
-              <input
-                id="namalengkap"
-                type="text"
-                placeholder="Nama Lengkap"
-                name="namaLengkap"
-                required
-              />
-              <p class="error"></p>
-            </div>
-            <div class="field">
-              <input
-                id="emailup"
-                type="text"
-                placeholder="Masukan Email"
-                name="emailup"
-                required
-              />
-              <p class="error"></p>
-            </div>
-            <div class="field">
-              <input
-                id="passwordup"
-                type="password"
-                name="password"
-                placeholder="Masukan Password"
-                required
-              />
-              <p class="error"></p>
-            </div>
-            <div class="field">
-              <input
-                id="password2"
-                type="password"
-                name="password2"
-                placeholder="Konfirmasi Password"
-                required
-              />
-              <p class="error"></p>
-            </div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" id="submitSignup" value="Sign Up" />
-            </div>
-            <div class="signup-link">
-              Sudah punya akun?
-              <p id="error"></p>
-              <a href="#login">Login</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!--bantuan-->
-    <div class="bantuan">
-      <form >
-        <h3>Ask Question</h3>
-        <div class="id">
-          <label for="Fullname"
-            >Full Name <input type="text" name="fullname" placeholder="Ex: Tiara Andini "
-          /></label>
-        </div>
-        <div class="id">
-          <label for="Email"
-            >Email <input type="Email" name="email" placeholder="Ex: Tiara123@gmail.com"
-          /></label>
-        </div>
-        <label for="Question"
-          >Question
-          <textarea
-            class="question"
-            name="question"
-            cols="30"
-            rows="5"
-            placeholder="Enter Your Question..."
-          ></textarea>
-        </label>
-        <div class="btn-group">
-          <button type="submit" class="btn submit">Submit</button>
-          <button type="reset" class="btn cancel" id="cancel">Cancel</button>
-        </div>
-        <div class="sosmed">
-          <h6>Atau</h6>
-          <div class="sosmed-icon">
-            <a href="#" id="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-            <a href="#" id="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" id="instagram"><i class="bx bxl-instagram"></i></a>
-          </div>
-        </div>
-      </form>
-    </div>
+   
 
 <footer class="footer-distributed">
       <!-- <div class="footer"> -->
