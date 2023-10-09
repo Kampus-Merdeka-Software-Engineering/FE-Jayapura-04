@@ -1390,6 +1390,7 @@ footer {
 
   .detail-produk {
     display: block;
+    overflow-x: hidden;
   }
   .deskripsi-produk .content {
     margin-left: 0rem;
