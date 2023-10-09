@@ -278,19 +278,16 @@ h6::after {
 }
 /*end header*/
 /*start tentang kami*/
-.thepict {
-  height: 630px;
-  width: 1120px;
-  display: block;
-  border-radius: 35px;
-  align-items: center;
-  margin: auto;
-  box-shadow: 8px 8px 30px rgba(29, 29, 29, 0.5);
+.visimisi {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.thepict:hover {
-  transform: translate(0px, -8px);
-  transition: 0.5s;
+.keunggulan {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .logoimg {
@@ -309,9 +306,8 @@ h6::after {
 
 .reach-us {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
-
 /*stop tentang kami*/
 /*start home*/
 
