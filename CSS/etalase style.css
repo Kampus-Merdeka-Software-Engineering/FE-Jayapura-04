@@ -764,9 +764,30 @@ span:hover {
     text-align: left;
     justify-content: center;
   }
-  .bantuan {
-    width: fit-content;
-    right: 50%;
+  .bantuan.active {
+    max-width: 100%;
+    right: 0;
+    z-index: 100000000;
+  }
+  .wrapper.active {
+    max-width: 100%;
+    right: 0;
+    top: 8%;
+  }
+
+  .detail-produk {
+    display: block;
+  }
+  .etalase {
+    grid-template-columns: repeat(1, 1fr);
+    /* Tengah secara horizontal */
+    place-items: center;
+
+    margin-right: 10%;
+  }
+  .card {
+    margin-bottom: 100px;
+    margin-left: 0;
   }
 }
 /* hp */
