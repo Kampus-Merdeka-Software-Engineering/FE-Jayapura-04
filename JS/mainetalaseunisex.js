@@ -16,18 +16,6 @@ signupLink.onclick = () => {
   return false;
 };
 
-function tambahEtalase() {
-  const etalaseProduk = document.querySelector(".etalase");
-  produk.forEach((produknya) => {
-    const cardEtalase = bikinCardEtalase(produknya);
-    etalaseProduk.appendChild(cardEtalase);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  tambahEtalase();
-});
-
 // Toggle class active
 const search = document.querySelector(".search-box");
 
