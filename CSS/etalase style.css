@@ -394,6 +394,58 @@ form .btn input[type="submit"] {
   right: -100%;
   z-index: 999;
 }
+.sosmed-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.sosmed .sosmed-icon a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  font-size: 1.5rem;
+}
+
+.sosmed .sosmed-icon a:hover {
+  color: #231f20;
+  background-color: #fff;
+}
+h6 {
+  margin: 30hv auto;
+  text-align: center;
+  position: relative;
+  color: #ddd;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+
+h6::before {
+  content: "";
+  height: 1px;
+  width: 18vw;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+h6::after {
+  content: "";
+  height: 1px;
+  width: 18vw;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
 
 .bantuan.active {
   right: 30%;
@@ -884,7 +936,7 @@ a.now {
   .bantuan.active {
     max-width: 100%;
     right: 0;
-    top: 6%;
+    top: 10%;
     z-index: 100000000;
   }
   .wrapper.active {
