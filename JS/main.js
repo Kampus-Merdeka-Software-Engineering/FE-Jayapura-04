@@ -98,6 +98,15 @@ let cancel = document.querySelector(".bantuan");
 document.querySelector("#cancel").onclick = () => {
   cancel.classList.remove("active");
 };
+// klik di luar sidebar menghilangkan nav
+const help = document.querySelector("#bantuan");
+
+document.addEventListener("click", function (e) {
+  if (!help.contains(e.target) && !bantuan.contains(e.target)) {
+    bantuan.classList.remove("active");
+  }
+});
+
 
 function tampilGambar() {
   var gambarBesar = document.getElementById("besarImg");
