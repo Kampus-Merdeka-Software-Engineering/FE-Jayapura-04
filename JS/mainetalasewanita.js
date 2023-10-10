@@ -1,6 +1,25 @@
+// Ambil elemen-elemen yang diperlukan
+const cartPopup = document.getElementById("cartPopup");
+const shoppingCartIcon = document.getElementById("shopping-cart");
 
+// Saat ikon shopping-cart diklik, buka atau tutup popup cart
+shoppingCartIcon.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (cartPopup.style.display === "block") {
+    // Jika popup cart sedang terbuka, tutup popup tersebut
+    cartPopup.style.display = "none";
+  } else {
+    // Jika popup cart sedang tertutup, buka popup tersebut
+    cartPopup.style.display = "block";
+  }
+});
 
-
+// Menutup pop-up cart saat pengguna mengklik di luar pop-up
+window.addEventListener("click", (event) => {
+  if (event.target === cartPopup) {
+    cartPopup.style.display = "none";
+  }
+});
 
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
@@ -101,16 +120,15 @@ document.addEventListener("click", function (e) {
   }
 });
 
-
 // Pemanggilan pakaian/wanita di backend
 document.addEventListener("DOMContentLoaded", function () {
   // Memanggil data dari backend
-  fetch('https://be-jayapura-04-production.up.railway.app/pakaian/wanita', {
-    method: 'GET',
+  fetch("https://be-jayapura-04-production.up.railway.app/pakaian/wanita", {
+    method: "GET",
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       return response.json();
     })
@@ -141,12 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
             </ul>
             <a href="deskripsiprodukwanita.html?product-type=${produknya.type}&product_id=${produknya.id}"><button class="buy">More</button></a>
           </div>`;
-        
+
         // Menambahkan card ke dalam .etalase
         etalaseProduk.appendChild(card);
       });
     })
     .catch((error) => {
-      console.error('Ada kesalahan saat mengambil data produk:', error);
+      console.error("Ada kesalahan saat mengambil data produk:", error);
     });
 });

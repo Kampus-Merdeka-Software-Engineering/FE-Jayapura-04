@@ -21,9 +21,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-
-
-
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
@@ -123,16 +120,15 @@ document.addEventListener("click", function (e) {
   }
 });
 
-
 // Pemanggilan pakaian/pria di backend
 document.addEventListener("DOMContentLoaded", function () {
   // Memanggil data dari backend
-  fetch('https://be-jayapura-04-production.up.railway.app/pakaian/pria', {
-    method: 'GET',
+  fetch("https://be-jayapura-04-production.up.railway.app/pakaian/pria", {
+    method: "GET",
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       return response.json();
     })
@@ -163,12 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
             </ul>
             <a href="deskripsiprodukpria.html?product-type=${produknya.type}&product_id=${produknya.id}"><button class="buy">More</button></a>
           </div>`;
-        
+
         // Menambahkan card ke dalam .etalase
         etalaseProduk.appendChild(card);
       });
     })
     .catch((error) => {
-      console.error('Ada kesalahan saat mengambil data produk:', error);
+      console.error("Ada kesalahan saat mengambil data produk:", error);
     });
 });

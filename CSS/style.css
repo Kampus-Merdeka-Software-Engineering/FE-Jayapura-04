@@ -1412,7 +1412,7 @@ a.now {
   .bantuan.active {
     max-width: 100%;
     right: 0;
-    top: 6%;
+    top: 10%;
     z-index: 100000000;
   }
   .wrapper.active {
@@ -1428,6 +1428,7 @@ a.now {
   }
   .deskripsi-produk .content {
     margin-left: 0rem;
+    width: 80%;
   }
   .cart {
     width: 90%;
