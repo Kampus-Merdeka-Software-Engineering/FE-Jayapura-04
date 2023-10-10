@@ -417,7 +417,7 @@ form .btn input[type="submit"] {
   color: #231f20;
   background-color: #fff;
 }
-h6 {
+.sosmed h6 {
   margin: 30hv auto;
   text-align: center;
   position: relative;
@@ -426,7 +426,7 @@ h6 {
   font-weight: 400;
 }
 
-h6::before {
+.sosmed h6::before {
   content: "";
   height: 1px;
   width: 18vw;
@@ -436,7 +436,7 @@ h6::before {
   right: 0;
 }
 
-h6::after {
+.sosmed h6::after {
   content: "";
   height: 1px;
   width: 18vw;
