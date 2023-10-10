@@ -1,3 +1,25 @@
+// Ambil elemen-elemen yang diperlukan
+const cartPopup = document.getElementById("cartPopup");
+const shoppingCartIcon = document.getElementById("shopping-cart");
+
+// Saat ikon shopping-cart diklik, buka atau tutup popup cart
+shoppingCartIcon.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (cartPopup.style.display === "block") {
+    // Jika popup cart sedang terbuka, tutup popup tersebut
+    cartPopup.style.display = "none";
+  } else {
+    // Jika popup cart sedang tertutup, buka popup tersebut
+    cartPopup.style.display = "block";
+  }
+});
+
+// Menutup pop-up cart saat pengguna mengklik di luar pop-up
+window.addEventListener("click", (event) => {
+  if (event.target === cartPopup) {
+    cartPopup.style.display = "none";
+  }
+});
 
 
 
